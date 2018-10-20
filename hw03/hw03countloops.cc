@@ -4,7 +4,10 @@
 
 using namespace std;
 
-int main(){
+
+	int Var1 = 5
+	int Var2 = 4
+	
 	int count=0;
 	for(int i=0; i<3; ++i){
 		
@@ -15,5 +18,5 @@ int main(){
 		  
 }//end of loop over input 
 
-printf("what is the total loops count %d\n", count);
+printf("what is the total loops scount %d\n", count);
 }
