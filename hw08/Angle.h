@@ -35,12 +35,17 @@ int deg;
 
 
 
+
 public:
 
 Angle();
 
-
- int getDeg()const;
+ Angle operator+(const Angle& deg)const;
+ Angle operator-(const Angle& deg)const;
+ Angle operator*(const Angle& deg)const;
+ Angle operator/(const Angle& deg)const;
+ 
+int getDeg()const;
 void set(int deg);
 
  

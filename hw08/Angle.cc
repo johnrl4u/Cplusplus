@@ -9,7 +9,7 @@
 
 Angle::Angle()
 {
-	
+	this->deg;
 }
 
 /*
@@ -18,12 +18,56 @@ for Angle > then 360 subtract 360 || less
 then 0 add 360
 */
 
+    Angle Angle::operator+(const Angle& deg) const 
+	{
+
+		int sum = this->deg + deg.getDeg();
+		
+		Angle A;
+		A.set(sum);
+		
+        return A;
+	}  
+	
+	Angle Angle::operator-(const Angle& deg) const 
+	{
+
+		int sum = this->deg - deg.getDeg();
+		
+		Angle A;
+		A.set(sum);
+		
+        return A;
+	}  
+	
+	Angle Angle::operator*(const Angle& deg) const 
+	{
+
+		int sum = this->deg * deg.getDeg();
+		
+		Angle A;
+		A.set(sum);
+		
+        return A;
+	}  
+   
+	Angle Angle::operator/(const Angle& deg) const 
+	{
+
+		int sum = this->deg / deg.getDeg();
+		
+		Angle A;
+		A.set(sum);
+		
+        return A;
+	}  
+	
     void Angle::set(int deg)
     {
-	
+	    
 		while(deg >360)
 		{
-			deg=deg-360;
+			deg=deg -360;
 		}
 		while(deg< 0)
 		{
@@ -36,7 +80,7 @@ then 0 add 360
 	}
 	int Angle::getDeg()const
 	{
-	return deg;
+	     return this->deg;
 
     } //end angle method
     
